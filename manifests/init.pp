@@ -43,7 +43,7 @@ class conda (
     $download_timeout = 1800,
     $channel          = undef,
     $py_version       = '3',
-    $version          = '4.3.1',
+    $version          = '4.3.21',
     $umask	          = '0022',
 ) {
     include conda::install
