@@ -17,7 +17,7 @@ Puppet::Type.type(:package).provide :conda,
     end
 
     def self.get_install_path
-        return "C:\\Anaconda" if is_windows?
+        return "C:\\ProgramData\\Miniconda3" if is_windows?
         "/opt/anaconda"
     end
 
