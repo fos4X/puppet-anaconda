@@ -27,7 +27,7 @@ define conda::env (
     # run env commands before installing packages
 
     # Make sure pip is installed
-    package { 'pip' :
+    package { "pip-$title" :
         ensure   => present,
         require  => Exec["conda_env_${env_name}"],
         provider => conda,
