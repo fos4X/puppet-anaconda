@@ -52,6 +52,8 @@ Puppet::Type.type(:package).provide :conda,
         package_name, junk, version = package.rpartition("-")
         if env != ""
             package_name = "#{env}::#{package_name}"
+        else
+            env, junk, package_name = package_name.rpartition("::")
         end
 
         {:ensure => version, :name => package_name, :provider => name}
