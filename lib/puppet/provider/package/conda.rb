@@ -169,7 +169,7 @@ Puppet::Type.type(:package).provide :conda,
             args << "--override-channels"
         end
 
-        args << "^#{package}$"
+        args << "#{package}"
 
         versions = []
         command = "#{self.class.get_conda_cmd} #{args.join(' ')}"
